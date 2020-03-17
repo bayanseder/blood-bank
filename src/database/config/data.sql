@@ -15,4 +15,6 @@ INSERT INTO blood_bank (name , city , contact_number ,list_of_doners)
     VALUES ('abu majed bloodbank','hebron',532873432,1),
            ('hart of jordan','amman',84398234,2),
            ('healthy qatar','qatar',712449634,3),
-           ('sweet blood','usa',11245677,4)
+           ('sweet blood','usa',11245677,4);
+COMMIT;
+END;

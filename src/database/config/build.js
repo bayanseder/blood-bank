@@ -4,14 +4,11 @@ const connection = require('./connection');
 
 const dbBuild = (cb)=>{
     const creatTable =fs.readFileSync(join(__dirname,'build.sql')).toString();
-    const insertValue = fs.readFileSync(join(__dirname,'data.sql')).toString();
-    return connection.query(creatTable,(err,res)=>{
-        if(err) throw new Error("ERR DATABASE BUILD")
-        else connection.query(insertValue,(err,res)=>{
-            if(err) throw new Error("ERR INSERT VALUES")
-            else console.log("YEAH, DONE")
-        })
-    })
+    const insertValue =fs.readFileSync(join(__dirname,'data.sql')).toString();
+    return connection.query(creatTable).then((res)=>
+         connection.query(insertValue).then((res)=>console.log('done')))
+         .catch(err => console.log("err", err))
+    
 }
 
-dbBuild ;
+dbBuild() ;
