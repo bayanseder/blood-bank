@@ -5,7 +5,7 @@ const getdoners=(callback)=>{
         if (err) {
           return callback(err);
         }
-        return callback(res.rows);
+        return callback(null,res.rows);
       })
 };
 const getpatients =(callback)=>{
@@ -13,7 +13,7 @@ const getpatients =(callback)=>{
         if (err) {
           return callback(err);
         }
-        return callback(res.rows);
+        return callback(null,res.rows);
       })
 };
 const getbloodbank=(callback)=>{
@@ -21,7 +21,7 @@ const getbloodbank=(callback)=>{
         if (err) {
           return callback(err);
         }
-        return callback(res.rows);
+        return callback(null,res.rows);
       })
 };
 module.exports={getbloodbank,getdoners,getpatients}
