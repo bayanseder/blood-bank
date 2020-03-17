@@ -1,0 +1,35 @@
+{
+  "name": "blood-bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "env2": "^2.2.2",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "init": "^0.1.2",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bayanseder/blood-bank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bayanseder/blood-bank/issues"
+  },
+  "homepage": "https://github.com/bayanseder/blood-bank#readme"
+}
