@@ -17,9 +17,11 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.13.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "supertest": "^4.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape tests/endpoint.js | tap-spec",
     "start": "nodemon src/index.js"
   },
   "repository": {
